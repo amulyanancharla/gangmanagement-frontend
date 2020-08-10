@@ -18,6 +18,7 @@ import {
   Dialog,
   DialogContent,
   TextField,
+  Link,
 } from "@material-ui/core";
 import {
   ArrowDropDown,
@@ -375,6 +376,11 @@ function AgencyDashboard({ authStore, snackStore }) {
                 </Typography>
               </ListItem>
             </List>
+            <Grid container justify="flex-end">
+              <Grid item style={{padding:"0.5rem"}}>
+                <Link href="#">View All</Link>
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
         <Grid item md={8} sm={12} xs={12}>
