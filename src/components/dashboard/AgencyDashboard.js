@@ -286,8 +286,24 @@ function AgencyDashboard({ authStore, snackStore }) {
                           variant="outlined"
                         />
                       </Grid>
-                      <Button color="#fff">CANCEL</Button>
-                  </Grid>
+                      <Grid item xs={12} container spacing={2} justify="flex-end">
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                          >
+                            Cancel
+                          </Button>
+                        </Grid>
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                            color="primary"
+                          >
+                            Add Event
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
                   </DialogContent>
                 </Dialog>
               </Typography>
