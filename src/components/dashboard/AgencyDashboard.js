@@ -215,7 +215,7 @@ function AgencyDashboard({ authStore, snackStore }) {
                 </Button>
                 <Dialog open={open} onClose={() => setOpen(false)}>
                   <DialogContent>
-                  <Grid container spacing={6}>
+                  <Grid container spacing={3}>
 
                       <Grid item xs={12}>
                         <Typography variant="body1">ADD CALENDAR EVENT</Typography>
@@ -234,11 +234,12 @@ function AgencyDashboard({ authStore, snackStore }) {
                       </Grid>
 
                       <Grid item xs={12}>
-                        <Grid container spacing={2} >
+                        <Grid container spacing={2}>
                           <Grid item xs={6}>
                             <TextField
                               id="outlined-basic"
                               label="DATE"
+                              fullWidth
                               type="date"
                               InputLabelProps={{
                                 shrink: true,
@@ -250,6 +251,7 @@ function AgencyDashboard({ authStore, snackStore }) {
                             <TextField
                               id="outlined-basic"
                               label="START TIME"
+                              fullWidth
                               type="time"
                               InputLabelProps={{
                                 shrink: true,
@@ -261,6 +263,7 @@ function AgencyDashboard({ authStore, snackStore }) {
                             <TextField
                               id="outlined-basic"
                               label="END TIME"
+                              fullWidth
                               type="time"
                               InputLabelProps={{
                                 shrink: true,
@@ -276,12 +279,14 @@ function AgencyDashboard({ authStore, snackStore }) {
                           label="DESCRIPTION"
                           fullWidth
                           multiline
+                          rows={2}
                           InputLabelProps={{
                             shrink: true,
                           }}
                           variant="outlined"
                         />
                       </Grid>
+                      <Button color="#fff">CANCEL</Button>
                   </Grid>
                   </DialogContent>
                 </Dialog>
