@@ -21,7 +21,7 @@ import {
   Link,
 } from "@material-ui/core";
 import FullCalendar from '@fullcalendar/react';
-import DayGridPlugin from '@fullcalendar/daygrid';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import {
   ArrowDropDown,
   ArrowDropUp,
@@ -387,7 +387,10 @@ function AgencyDashboard({ authStore, snackStore }) {
                 </Button>
                 <Dialog open={openfullcalendar} onClose={() => setFullCalendarOpen(false)}>
                   <DialogContent>
-                    <FullCalendar />
+                    <FullCalendar
+                      plugins={[ dayGridPlugin ]}
+                      initialView="dayGridMonth"
+                    />
                   </DialogContent>
                 </Dialog>
               </Grid>
