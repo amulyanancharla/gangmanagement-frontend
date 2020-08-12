@@ -21,6 +21,7 @@ import PersonForm from "./agency/person/Form";
 import Profile from "./agency/person/Profile";
 import Persons from "./agency/person/Persons";
 import CalendarOverlay from "./calendar/CalendarOverlay";
+import FullCalendar from "./calendar/FullCalendar";
 
 const platformRoutes = [
   { path: "", component: PlatformSignInForm, authProtected: false },
@@ -55,6 +56,7 @@ const agencyRoutes = [
   { path: "data", component: AgencyData },
   { path: "persons", component: Persons },
   { path: "calendaroverlay", component: CalendarOverlay },
+  { path: "fullcalendar", component: FullCalendar },
 ];
 
 export default (

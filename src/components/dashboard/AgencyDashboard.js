@@ -20,12 +20,15 @@ import {
   TextField,
   Link,
 } from "@material-ui/core";
+import FullCalendar from '@fullcalendar/react';
+import DayGridPlugin from '@fullcalendar/daygrid';
 import {
   ArrowDropDown,
   ArrowDropUp,
   SupervisedUserCircle,
   ShowChart,
   AddCircleOutline,
+  DateRangeOutlined,
 } from "@material-ui/icons";
 import InviteUserModal from "../auth/InviteUserModal";
 import { Navbar, mobxify } from "../general";
@@ -68,6 +71,7 @@ const columns = [
 
 function AgencyDashboard({ authStore, snackStore }) {
   const [open, setOpen] = useState(false);
+  const [openfullcalendar, setFullCalendarOpen] = useState(false);
   const [users, setUsers] = useState([]);
   const [fetching, setFetching] = useState(false);
 
@@ -378,7 +382,14 @@ function AgencyDashboard({ authStore, snackStore }) {
             </List>
             <Grid container justify="flex-end">
               <Grid item style={{padding:"0.5rem"}}>
-                <Link href="#">View All</Link>
+                <Button onClick={() => setFullCalendarOpen(true)}>
+                  view all
+                </Button>
+                <Dialog open={openfullcalendar} onClose={() => setFullCalendarOpen(false)}>
+                  <DialogContent>
+                    <FullCalendar />
+                  </DialogContent>
+                </Dialog>
               </Grid>
             </Grid>
           </Paper>
